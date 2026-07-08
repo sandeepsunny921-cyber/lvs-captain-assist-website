@@ -1,0 +1,6 @@
+{
+  "name": "LVS Captain Assist Pro",
+  "description": "Official verification and information website for LVS Captain Assist Pro, featuring compliance pages for Razorpay merchant verification including terms of service, privacy policy, about us, and contact details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

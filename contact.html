@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | LVS Captain Assist Pro</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex items-center gap-3">
+            <div class="bg-emerald-600 text-white p-2.5 rounded-xl shadow-md shadow-emerald-600/10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M2 12h20M12 12m-3 0a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z" />
+              </svg>
+            </div>
+            <div>
+              <span class="font-display font-bold text-xl tracking-tight text-slate-900 block leading-tight">LVS Captain</span>
+              <span class="text-xs font-semibold text-emerald-600 uppercase tracking-widest block leading-none">Assist Pro</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+            <a href="./index.html" class="hover:text-emerald-600 transition">Home</a>
+            <a href="./about.html" class="hover:text-slate-900 transition">About Us</a>
+            <a href="./index.html#features" class="hover:text-slate-900 transition">Features</a>
+            <a href="./index.html#pricing" class="hover:text-slate-900 transition">Pricing Plans</a>
+            <a href="./contact.html" class="text-emerald-600 hover:text-emerald-700 transition">Contact Us</a>
+          </nav>
+
+          <!-- Desktop CTA Button -->
+          <div class="hidden md:block">
+            <a href="./index.html#pricing" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 h-11 inline-flex items-center justify-center rounded-xl transition shadow-lg shadow-emerald-600/15 hover-lift">
+              Choose Plan
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+        <a href="./index.html" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-slate-50 transition">Home</a>
+        <a href="./about.html" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-slate-50 transition">About Us</a>
+        <a href="./index.html#features" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-slate-50 transition">Features</a>
+        <a href="./index.html#pricing" class="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-slate-50 transition">Pricing Plans</a>
+        <a href="./contact.html" class="block px-3 py-2.5 rounded-lg text-emerald-600 font-semibold bg-emerald-50">Contact Us</a>
+        <div class="pt-2">
+          <a href="./index.html#pricing" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-semibold py-3 block rounded-lg transition shadow-md">
+            Choose Plan
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subpage Banner -->
+    <section class="bg-linear-to-b from-white to-slate-100 py-16 border-b border-slate-200/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+        <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest block mb-2">Customer Care & Compliance</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-display">Contact Help Desk</h1>
+        <p class="text-sm sm:text-base text-slate-500 mt-3 max-w-2xl">
+          We are here to assist with subscription issues, account setups, billing discrepancies, or refund queries.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <!-- Dynamic Selected Plan Notice -->
+      <div id="plan-notice" class="hidden mb-8 max-w-3xl bg-emerald-50 border border-emerald-100 p-4 rounded-2xl flex items-center gap-3">
+        <div class="h-8 w-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0">✓</div>
+        <div>
+          <h4 class="font-bold text-emerald-900 text-sm">Subscription Plan Selected</h4>
+          <p class="text-xs text-emerald-700">Please provide your details below to request activation credentials. Our operations team will initiate your Razorpay sandbox link instantly.</p>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <!-- Contact Form Column -->
+        <div class="lg:col-span-7 bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xs">
+          <h3 class="font-display font-bold text-2xl text-slate-950 mb-2">Submit a Service Ticket</h3>
+          <p class="text-slate-500 text-sm mb-8">All incoming tickets generate a reference ID and receive a human response within 24 operational hours.</p>
+
+          <form id="contact-form" class="space-y-6">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="space-y-1.5">
+                <label for="name" class="text-xs font-bold text-slate-700 uppercase tracking-wider block">Full Legal Name</label>
+                <input type="text" id="name" required class="w-full bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white rounded-xl px-4 py-3 text-sm transition outline-none" placeholder="Rajesh Kumar" />
+              </div>
+              <div class="space-y-1.5">
+                <label for="phone" class="text-xs font-bold text-slate-700 uppercase tracking-wider block">Contact Number</label>
+                <input type="tel" id="phone" required class="w-full bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white rounded-xl px-4 py-3 text-sm transition outline-none" placeholder="+91 98765 43210" />
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="email" class="text-xs font-bold text-slate-700 uppercase tracking-wider block">Email Address</label>
+              <input type="email" id="email" required class="w-full bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white rounded-xl px-4 py-3 text-sm transition outline-none" placeholder="rajesh@example.com" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="subject" class="text-xs font-bold text-slate-700 uppercase tracking-wider block">Category / Subject</label>
+              <select id="subject" required class="w-full bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white rounded-xl px-4 py-3 text-sm transition outline-none appearance-none">
+                <option value="">-- Choose Category --</option>
+                <option value="general">General Platform Inquiry</option>
+                <option value="billing">Billing & Razorpay Subscription Setup</option>
+                <option value="refund">Refund Request & Cancellations</option>
+                <option value="roadside">Roadside breakdown guide directory</option>
+                <option value="fleet">Enterprise Multi-Vehicle setup</option>
+              </select>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="message" class="text-xs font-bold text-slate-700 uppercase tracking-wider block">Message Details</label>
+              <textarea id="message" rows="5" required class="w-full bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white rounded-xl p-4 text-sm transition outline-none" placeholder="Please elaborate on your query. Cite your subscription transaction reference if writing about a Razorpay transaction issue."></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-emerald-600/15 hover-lift cursor-pointer text-sm">
+              Submit Ticket Reference
+            </button>
+          </form>
+
+          <!-- Success Modal Overlay (Simulated) -->
+          <div id="success-overlay" class="hidden mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6 text-center space-y-3">
+            <div class="h-12 w-12 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto">✓</div>
+            <h4 class="font-display font-bold text-slate-900 text-lg">Ticket Submitted Successfully!</h4>
+            <p class="text-xs text-slate-500 max-w-md mx-auto">
+              Your ticket reference **#LVS-TKT-2026-8942** has been registered. An automated receipt confirmation has been emailed to your address. Our helpdesk agent will reply shortly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact details / Map Simulator Column -->
+        <div class="lg:col-span-5 space-y-8">
+          
+          <!-- Official Registered Addresses -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-6">
+            <h4 class="font-display font-bold text-xl text-slate-950 border-b border-slate-100 pb-3">Official Metadata</h4>
+            
+            <div class="space-y-4 text-xs sm:text-sm">
+              <div class="flex gap-3 items-start">
+                <div class="h-8 w-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-0.5">Registered Legal Entity</span>
+                  <p class="font-bold text-slate-900">LVS Tech Solutions</p>
+                  <p class="text-xs text-slate-500">Corporate merchant entity under Razorpay.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <div class="h-8 w-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-0.5">Physical Registered Address</span>
+                  <p class="text-slate-700 leading-relaxed font-medium">
+                    Plot No. 42, 3rd Floor, Tech Park Area, Sector 62, Noida, Uttar Pradesh, 201301, India.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <div class="h-8 w-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-0.5">Customer Care Hotline</span>
+                  <p class="font-bold text-slate-900">+91 98765 43210</p>
+                  <p class="text-xs text-slate-500">Available Monday to Saturday: 9:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <div class="h-8 w-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-0.5">Operational Support Desk</span>
+                  <p class="font-bold text-slate-900">support@lvscaptainassist.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stylized Geolocation Visual Map Simulator (Elegant SVG-based layout) -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4">
+            <div class="flex items-center justify-between">
+              <h4 class="font-display font-bold text-base text-slate-950">Map Directory</h4>
+              <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">NOIDA SECTOR 62</span>
+            </div>
+            
+            <div class="bg-slate-100 rounded-2xl h-48 relative overflow-hidden flex items-center justify-center border border-slate-200/80">
+              <!-- Grid line simulator -->
+              <svg class="absolute inset-0 w-full h-full text-slate-200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+                <!-- Stylized map streets in light slate -->
+                <path d="M -20 100 L 400 100" stroke="#cbd5e1" stroke-width="8" />
+                <path d="M 120 -20 L 120 220" stroke="#cbd5e1" stroke-width="12" />
+                <path d="M 260 -20 L 260 220" stroke="#cbd5e1" stroke-width="6" />
+                <!-- Water or park block -->
+                <rect x="10" y="10" width="80" height="70" rx="10" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1" />
+                <!-- Tech park building block -->
+                <rect x="140" y="40" width="100" height="120" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+              </svg>
+
+              <!-- Central Pin -->
+              <div class="relative z-10 flex flex-col items-center">
+                <div class="bg-emerald-600 text-white p-2 rounded-full shadow-lg animate-bounce flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M2 12h20M12 12m-3 0a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z" />
+                  </svg>
+                </div>
+                <div class="bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md mt-1.5 shadow-md font-display uppercase tracking-wider">LVS HQ</div>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-400 text-center">Visit by appointment only. Submit a support ticket above for reservations.</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-slate-900">
+          
+          <!-- Column 1: Brand & Registration -->
+          <div class="md:col-span-5 space-y-6">
+            <div class="flex items-center gap-3 text-white">
+              <div class="bg-emerald-600 text-white p-2 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M2 12h20M12 12m-3 0a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z" />
+                </svg>
+              </div>
+              <span class="font-display font-bold text-lg tracking-tight">LVS Captain Assist Pro</span>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              LVS Captain Assist Pro is a premium fleet logistics tool providing safety logging, travel mapping logs, and roadside guide directories. Owned & operated by LVS Tech Solutions.
+            </p>
+            <div class="text-xs text-slate-500 leading-relaxed space-y-1 bg-slate-900/40 p-4 rounded-xl border border-slate-900">
+              <span class="block font-bold text-slate-400">Corporate Identity & Registration</span>
+              <span class="block">Operating Merchant Name: LVS Tech Solutions</span>
+              <span class="block">Registered Address: Plot No. 42, 3rd Floor, Tech Park Area, Sector 62, Noida, Uttar Pradesh, 201301, India.</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="md:col-span-3 space-y-4">
+            <h4 class="text-white font-bold text-sm tracking-widest uppercase">Ecosystem Links</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="./index.html" class="hover:text-emerald-500 transition">Home Page</a></li>
+              <li><a href="./about.html" class="hover:text-emerald-500 transition">About Company</a></li>
+              <li><a href="./index.html#features" class="hover:text-emerald-500 transition">Our Key Features</a></li>
+              <li><a href="./index.html#pricing" class="hover:text-emerald-500 transition">Pricing Plans</a></li>
+              <li><a href="./contact.html" class="hover:text-emerald-500 transition">Contact Support</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Legal Compliance -->
+          <div class="md:col-span-4 space-y-4">
+            <h4 class="text-white font-bold text-sm tracking-widest uppercase">Razorpay Verification</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="./terms.html" class="hover:text-emerald-500 transition">Terms of Service & Conditions</a></li>
+              <li><a href="./privacy.html" class="hover:text-emerald-500 transition">Privacy Policy Statement</a></li>
+              <li><a href="./terms.html#refunds" class="hover:text-emerald-500 transition">Refund & Cancellation Policy</a></li>
+              <li><a href="./terms.html#pricing-details" class="hover:text-emerald-500 transition">Pricing & Tariffs Structure</a></li>
+              <li><a href="./contact.html" class="hover:text-emerald-500 transition">Customer Care Operations</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom Copyright / Security Signatures -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-600">
+          <div>
+            &copy; 2026 LVS Tech Solutions (LVS Captain Assist Pro). All Rights Reserved.
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+              </svg> Razorpay Secure Connection
+            </span>
+            <span class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+              </svg> PCI-DSS Compliant
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Form Handler Script & URL Query Parameter Reader -->
+    <script>
+      // 1. Parse URL Parameter to Auto-Select Subject
+      function checkUrlParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan');
+        const planNotice = document.getElementById('plan-notice');
+        const subjectSelect = document.getElementById('subject');
+
+        if (plan) {
+          planNotice.classList.remove('hidden');
+          
+          if (subjectSelect) {
+            subjectSelect.value = 'billing';
+          }
+        }
+      }
+
+      window.addEventListener('load', checkUrlParams);
+
+      // 2. Mobile Navbar Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // 3. Contact Form Submission Handler
+      const contactForm = document.getElementById('contact-form');
+      const successOverlay = document.getElementById('success-overlay');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Hide form and display custom, high-fidelity success modal
+        contactForm.classList.add('hidden');
+        successOverlay.classList.remove('hidden');
+      });
+    </script>
+  </body>
+</html>
