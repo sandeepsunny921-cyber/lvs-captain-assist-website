@@ -58,12 +58,53 @@ h1, h2, h3, h4, h5, h6 {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #E2E5DE;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #D1D1CB;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #8BA888;
 }
+
+/* Fallback sizing for SVG icons to prevent them from scaling to full-screen when loaded statically or if Tailwind classes fail */
+svg {
+  max-width: 100%;
+}
+svg.w-6, svg.h-6, .w-6 { width: 24px !important; height: 24px !important; }
+svg.w-5, svg.h-5, .w-5 { width: 20px !important; height: 20px !important; }
+svg.w-4, svg.h-4, .w-4 { width: 16px !important; height: 16px !important; }
+svg.w-3\.5, svg.h-3\.5, .w-3\.5 { width: 14px !important; height: 14px !important; }
+svg.w-4\.5, svg.h-4\.5, .w-4\.5 { width: 18px !important; height: 18px !important; }
+
+/* Set logo size to max-width: 120px as requested */
+.logo-img, .app-logo, .brand-logo, header .flex.items-center.gap-3 svg, footer .flex.items-center.gap-3 svg {
+  max-width: 120px !important;
+  display: inline-block;
+}
+
+/* Fallback core utility classes to support basic layout in case of local load or non-built static deployment */
+.flex { display: flex !important; }
+.flex-col { flex-direction: column !important; }
+.items-center { align-items: center !important; }
+.justify-between { justify-content: space-between !important; }
+.grid { display: grid !important; }
+.gap-3 { gap: 0.75rem !important; }
+.gap-4 { gap: 1rem !important; }
+.gap-8 { gap: 2rem !important; }
+.rounded-xl { border-radius: 0.75rem !important; }
+.rounded-2xl { border-radius: 1rem !important; }
+.rounded-3xl { border-radius: 1.5rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-2\.5 { padding: 0.625rem !important; }
+.bg-emerald-600 { background-color: #8BA888 !important; }
+.text-white { color: #ffffff !important; }
+.text-emerald-600 { color: #8BA888 !important; }
+.text-slate-900 { color: #2D3A3A !important; }
+.text-slate-800 { color: #2D3A3A !important; }
+.text-slate-600 { color: #5C6B6B !important; }
+.bg-white { background-color: #ffffff !important; }
+.border-b { border-bottom-width: 1px !important; }
+.border-slate-100 { border-color: #E2E5DE !important; }
+
